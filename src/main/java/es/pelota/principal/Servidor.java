@@ -36,21 +36,21 @@ public class Servidor extends Observable implements Runnable {
                 //Espero a que un cliente se conecte
                 sc = servidor.accept();
 
-                System.out.println("Cliente conectado");
+                //System.out.println("Cliente conectado");
                 
                 in = new DataInputStream(sc.getInputStream());             
                 
                 //Leo mensaje que me envia
                 int y = in.read();
                 
-                System.out.println("Servidor Y: " + y);
-
+                //System.out.println("Servidor Y: " + y);
+                
                 this.setChanged();
                 this.notifyObservers(y);
                 this.clearChanged();
                 
                 sc.close();
-                System.out.println("Cliente desconectado");
+                //System.out.println("Cliente desconectado");
 
             }
 

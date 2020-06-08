@@ -3,13 +3,11 @@ package es.pelota.principal;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-/**
- * @author Aguilar
- */
+/* @author Aguilar */
 public class EventoTeclado extends KeyAdapter {
 
     //VARIABLES
-    static boolean w, s, arriba, abajo;
+    public static boolean w, s, arriba, abajo;
 
     //METODOS
     //Metodo para saber que tacla presionamos
@@ -29,6 +27,7 @@ public class EventoTeclado extends KeyAdapter {
         if (id == KeyEvent.VK_DOWN) {
             abajo = true;
         }
+        
     }
 
     //Metodo para saber que tacla dejamos de presionar
@@ -48,6 +47,7 @@ public class EventoTeclado extends KeyAdapter {
         if (id == KeyEvent.VK_DOWN) {
             abajo = false;
         }
+        
     }
 
 }
